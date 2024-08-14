@@ -18,7 +18,6 @@ function App() {
           />
           <Route path="/forex" element={<Forex />} />
         </Routes>
-        {/* <Counter count={count} setCount={setCount} /> */}
       </Router>
     </div>
   );
