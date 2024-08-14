@@ -28,13 +28,33 @@ const Counter = ({ count, setCount }) => {
   return (
     <div>
       <h1>Counter : {counter}</h1>
-      <button onClick={add}>Increase Count</button>
-      <button onClick={subtract}>Decrease Count</button>
-      <button onClick={submitValue}>Submit</button>
-      <button onClick={reset}>Reset</button>
+      <button style={styles.buttonStyles} onClick={add}>
+        Increase Count
+      </button>
+      <button style={styles.buttonStyles} onClick={subtract}>
+        Decrease Count
+      </button>
+      <button style={styles.buttonStyles} onClick={submitValue}>
+        Submit
+      </button>
+      <button style={styles.buttonStyles} onClick={reset}>
+        Reset
+      </button>
       {show && <h1>Final Value : {count}</h1>}
     </div>
   );
 };
 
 export default Counter;
+
+const styles = {
+  buttonStyles: {
+    padding: "10px",
+    margin: "10px",
+    borderRadius: "5px",
+    border: "1px solid #ccc",
+    backgroundColor: "#f0f0f0",
+    color: "#333",
+    cursor: "pointer",
+  },
+};
